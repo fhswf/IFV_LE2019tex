@@ -1,0 +1,106 @@
+% Copyright 2019
+% IfV NRW, Fachhochschule Südwestfalen
+% Arbeitsgebiet Mediengestaltung und Publishing
+%
+% Diese Datei wird eingesetzt für die Erstellung von Lerneinheiten im Verbundstudium.
+
+% 2019-10-15
+% Sandra Ciupka
+
+
+%%%%%%%%%% Abbildungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbildung: 107 mm
+\begin{figure}[!h]
+	\includegraphics[width=10.7cm]{Dateipfad}
+	\caption{Beschriftung}
+	\label{Bezeichnung für Verweis}
+\end{figure}
+
+
+% Abbildung: 163 mm
+\begin{figure}[!h]
+	\begin{wide}	
+		\includegraphics[width=\textwidth]{Dateipfad}
+		\begin{minipage}{0.66\textwidth}
+			\caption{Beschriftung}
+			\label{Bezeichnung}
+		\end{minipage}
+	\end{wide}
+\end{figure}
+
+Referenz auf Abbildung:
+Abbildung~\ref{Bezeichnung für Verweis} [S.\pageref{Bezeichnung für Verweis}]
+
+
+%%%%%%%%%% Tabellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tabelle mit gleichbreiten Spalten
+\begin{table}
+	\captionabove{Tabellenbeschriftung}
+	\begin{tabularx}{\textwidth}{|X|X|}
+		\hline
+		\bfseries Zelle links & \bfseries Zelle rechts \\ % Tabellenkopf fett
+		\hline
+		Zelle 1 & Zelle 2\\
+		\hline
+		Zelle 2 & Zelle 3\\
+		\hline	
+	\end{tabularx}
+\end{table}
+
+% Tabelle mit flexiblen Spalten
+\begin{table}
+	\captionabove{Tabellenbeschriftung}
+	\begin{tabulary}{10.7cm}{|L|L|L|L|L|L|} % linksbündig
+		\hline
+		Zelle 1 & 2	& 3 & Zelle 4 & 5 & 6\\
+		\hline
+		Zelle 7	& 8	& 9 & Zelle 10 & 11 & 12\\
+		\hline
+	\end{tabulary}
+\end{table}
+
+% Breite Tabelle (163mm)
+\begin{table}
+	\captionabove{Tabellenbeschriftung}
+	\begin{tabulary}{16.3cm}{|L|L|L|}
+		\hline
+		Dies ist Platzhaltertext für Zelle 1 & Dies ist Platzhaltertext für Zelle 2 & Dies ist Platzhaltertext für Zelle 3\\
+		\hline
+		Dies ist Platzhaltertext für Zelle 4 & Dies ist Platzhaltertext für Zelle 5 & Dies ist Platzhaltertext für Zelle 6\\
+		\hline
+	\end{tabulary}
+\end{table}
+
+
+%%%%%%%%%% Textgruppen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% Marginalie/Randbemerkung
+\mpar{Text}
+
+
+%%%%%%%%%% Fußnote
+\footnote{Text}
+
+
+%%%%%%%%%% Rasterfläche
+\begin{MyToDo} % optional [Überschrift]
+	Dies ist Platzhaltertext.
+\end{MyToDo}\\
+
+
+%%%%%%%%%% Text eingezogen, kursive Schrift
+\begin{Einzugit}{Definition}
+	Dies ist Platzhaltertext.	
+\end{Einzugit}
+
+
+%%%%%%%%%% Text eingezogen, normale Schrift
+\begin{Einzugup}{Satz, Beispiel}
+	Dies ist Platzhaltertext.	
+\end{Einzugup}
+
+
+%%%%%%%%%% Textgruppe mit Überschrift
+\begin{Textgruppe}{Überschrift Textgruppe}
+	Dies ist Platzhaltertext.
+\end{Textgruppe}

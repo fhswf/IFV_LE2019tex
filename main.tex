@@ -1,0 +1,73 @@
+% Copyright 2019
+% IfV NRW, Fachhochschule Südwestfalen
+% Arbeitsgebiet Mediengestaltung und Publishing
+%
+% Diese Datei wird eingesetzt für die Erstellung von Lerneinheiten im Verbundstudium.
+
+% 2019-10-15
+% Sandra Ciupka
+
+
+\documentclass[paper=a4,fontsize=10pt,pagesize,headsepline=on,oneside,BCOR=13mm,
+chapterprefix=false]{scrbook}
+
+\usepackage{includes/ifv}
+
+% Jetzt beginnt das eigentliche Dokument
+
+\begin{document}
+
+	\newgeometry{rmargin=23.5mm,tmargin=29.4mm,textwidth=163mm,textheight=243mm,headheight=8mm}
+	
+	%\maketitle
+	
+	\pagestyle{headings}
+	\tableofcontents
+			
+	\restoregeometry
+	
+	\raggedbottom  % kein einheitlicher Rand unten (-> schönere Abstände zwischen Absätzen)
+	\RaggedRight   % Flattersatz mit Trennungen
+	
+	\begin{spacing}{1.1} % Zeilenabstand
+		
+		\input{contents/LE_2019_Kapitel1_Vorwort}	
+		\input{contents/LE_2019_Kapitel2_Inhalt}
+		\input{contents/Kapitel3_CodeListing}
+		
+	\end{spacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbildungsverzeichnis
+% Tabellenverzeichnis
+
+	\listoftables
+	\addcontentsline{toc}{section}{Tabellenverzeichnis}
+	\listoffigures
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Klassisches BibTeX
+
+	%\nocite{*}
+	%\bibliographystyle{babplain}
+	%\bibliographystyle{alphadin} 	% Festlegung Art Zitierung (Havardmethode: Abkuerzung Autor+Jahr)
+	
+	%Literaturliste soll im Inhaltsverzeichnis auftauchen:
+	%\newpage
+	%\addcontentsline{toc}{section}{Literaturverzeichnis}
+	%\bibliography{Literatur.bib}   % Datei aus Citavi
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% BibLaTeX
+
+	\nocite{*}
+
+	%\newpage
+	%\ifkomabibtotocnumbered{true}
+	\input{literatur}    % Ergänzung angelieferter Daten
+	\addcontentsline{toc}{section}{Literaturverzeichnis}
+	%\renewcommand\chaptername{\protect Literaturverzeichnis}
+	%\printbibliography
+	
+\end{document}
